@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vistora Edu | Student Admission Portal</title>
+<meta name="description" content="Apply for admission guidance, track your application status, talk to your counsellor and download admission documents.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="portal">
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="index.html"><span class="logo-mark">V</span><span>Vistora Edu <span style="display:block;font-size:.58rem;font-weight:600;letter-spacing:.14em;color:var(--muted);text-transform:uppercase">Admission Portal</span></span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="index.html" style="font-weight:700;font-size:.88rem;padding:9px 14px">← Website</a>
+      <button data-go="home" id="nb-home">Home</button>
+      <button data-go="slogin" id="nb-slogin">Student Login</button>
+      <button data-go="apply" class="cta" id="nb-apply">APPLY NOW</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="view" id="view-home" data-view="home">
+  <div class="phero">
+    <h1 id="homeTitle">Vistora Edu — Student Admission &amp; Guidance Portal</h1>
+    <p id="homeNote">Apply once, track everything. Personalised admission guidance for Nursing, BPT, BBA, BCA, B.Com, Engineering and more — Kerala, Karnataka &amp; Tamil Nadu.</p>
+    <div class="btn-row" style="margin-top:22px;position:relative">
+      <button class="btn btn-cyan" data-go="apply">APPLY NOW — GET ADMISSION GUIDANCE</button>
+      <button class="btn btn-white" data-go="slogin">STUDENT LOGIN</button>
+    </div>
+  </div>
+  <div class="grid3" style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px">
+    <div class="card"><h3 style="margin-top:0;font-size:1.02rem">1 · Apply Online</h3><p class="muted">Fill one simple form with your course, entrance, category and preferences. Your Application ID is created instantly.</p></div>
+    <div class="card"><h3 style="margin-top:0;font-size:1.02rem">2 · Counsellor Contacts You</h3><p class="muted">Your counsellor receives your details on WhatsApp and guides you through eligibility, colleges and application.</p></div>
+    <div class="card"><h3 style="margin-top:0;font-size:1.02rem">3 · Track &amp; Download</h3><p class="muted">Login anytime to see your admission status, college recommendations and download your admission documents.</p></div>
+  </div>
+  <h2 style="margin:40px 0 6px;font-size:1.4rem">⭐ Success Stories</h2>
+  <p class="muted" style="margin-bottom:16px">Only verified feedback approved by Vistora appears here.</p>
+  <div class="grid2" id="homeStories"></div>
+</section>
+
+<section class="view" id="view-apply" data-view="apply">
+  <div class="card" style="max-width:860px;margin:0 auto">
+    <h2 style="font-size:1.4rem">Admission Application</h2>
+    <p class="muted" style="margin:6px 0 20px">Fill your details — a Student Portal account is created automatically and your counsellor is notified.</p>
+    <form id="applyForm" novalidate>
+      <div class="fgrid">
+        <div class="field"><label for="aName">Full Name *</label><input id="aName" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="aDob">Date of Birth * <span class="fnote">(used for portal login)</span></label><input id="aDob" type="date" required></div>
+        <div class="field"><label for="aGender">Gender</label><select id="aGender"><option>Not specified</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+        <div class="field"><label for="aPhone">Phone Number *</label><input id="aPhone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="aWa">WhatsApp Number *</label><input id="aWa" type="tel" required></div>
+        <div class="field"><label for="aEmail">Email</label><input id="aEmail" type="email" autocomplete="email"></div>
+        <div class="field"><label for="aCourse">Course *</label><select id="aCourse" required><option>MBBS</option><option>BDS</option><option>B.Sc Nursing</option><option>BPT</option><option>BOT</option><option>B.Pharm</option><option>Allied Health</option><option>BBA</option><option>BCA</option><option>B.Com</option><option>Engineering (B.Tech)</option><option>Other Degree Programs</option></select></div>
+        <div class="field"><label for="aExam">Entrance Exam</label><select id="aExam"><option>None</option><option>NEET</option><option>JEE</option><option>KEAM</option><option>Other</option></select></div>
+        <div class="field"><label for="aRank">NEET / JEE Rank</label><input id="aRank" type="text"></div>
+        <div class="field"><label for="aScore">Score / Marks</label><input id="aScore" type="text"></div>
+        <div class="field"><label for="aCat">Category</label><select id="aCat"><option>General</option><option>OBC</option><option>SC</option><option>ST</option><option>EWS</option><option>Other</option></select></div>
+        <div class="field"><label for="aState">Preferred State</label><select id="aState"><option>Kerala</option><option>Karnataka</option><option>Tamil Nadu</option><option>Flexible — guide me</option></select></div>
+        <div class="field"><label for="aBudget">Budget</label><select id="aBudget"><option>Not fixed — guide me</option><option>Under ₹5 Lakhs</option><option>₹5–10 Lakhs</option><option>₹10–20 Lakhs</option><option>₹20–30 Lakhs</option><option>Above ₹30 Lakhs</option></select></div>
+        <div class="field" style="grid-column:1/-1"><label for="aPref">Preferred College / Course (if any)</label><input id="aPref" type="text"></div>
+        <div class="field" style="grid-column:1/-1"><label for="aAddr">Address</label><textarea id="aAddr" style="min-height:60px"></textarea></div>
+        <div class="field" style="grid-column:1/-1"><label for="aNotes">Other requirements</label><textarea id="aNotes" placeholder="Hostel, language of study, special requests…"></textarea></div>
+      </div>
+      <div class="err" id="aErr" style="margin-top:14px"></div>
+      <button class="btn btn-blue" type="submit" id="aSubmit" style="width:100%;margin-top:18px">SUBMIT APPLICATION</button>
+      <p class="fnote center" style="margin-top:12px">We use these details only for admission guidance — never shared, never sold.</p>
+    </form>
+  </div>
+</section>
+
+<section class="view" id="view-applydone" data-view="applydone">
+  <div class="card center" style="max-width:640px;margin:0 auto">
+    <div style="font-size:2.6rem">✅</div>
+    <h2 style="margin:8px 0">Application Received!</h2>
+    <p class="muted">Your Application ID — save this:</p>
+    <p style="font-size:1.9rem;font-weight:800;color:var(--blue);margin:6px 0 4px" id="doneId">VIS-00000</p>
+    <p class="muted small">Your Student Portal account is created.<br>Login anytime with <b>Phone Number + Date of Birth</b>.</p>
+    <div class="btn-row" style="justify-content:center;margin-top:20px">
+      <a class="btn btn-cyan" id="doneWa" target="_blank" rel="noopener">💬 SEND DETAILS TO COUNSELLOR ON WHATSAPP</a>
+      <button class="btn btn-blue" data-go="slogin">GO TO STUDENT PORTAL</button>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-slogin" data-view="slogin">
+  <div class="card" style="max-width:440px;margin:0 auto">
+    <h2 style="font-size:1.3rem">Student Portal Login</h2>
+    <p class="muted" style="margin:6px 0 18px">Use the phone number and date of birth you submitted.</p>
+    <form id="loginForm" novalidate>
+      <div class="field" style="margin-bottom:14px"><label for="lPhone">Mobile Number *</label><input id="lPhone" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="lDob">Date of Birth *</label><input id="lDob" type="date" required></div>
+      <div class="err" id="lErr" style="margin-top:14px"></div>
+      <button class="btn btn-blue" type="submit" id="lSubmit" style="width:100%;margin-top:16px">LOGIN</button>
+    </form>
+    <p class="fnote center" style="margin-top:14px">Haven't applied yet? <a href="#" data-go="apply"><strong>Apply now</strong></a></p>
+  </div>
+</section>
+
+<section class="view" id="view-student" data-view="student"><div class="stack" id="studentRoot"></div></section>
+
+</main>
+
+<footer><div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between">
+  <span>© <span id="yy">2025</span> Vistora Edu · <a href="index.html">Main Website</a></span>
+  <span id="footContact"></span>
+</div></footer>
+
+<div id="printSheet" aria-hidden="true"></div>
+
+<script src="js/config.js"></script>
+<script src="js/portal.js"></script>
+</body>
+</html>
