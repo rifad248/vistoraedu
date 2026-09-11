@@ -59,6 +59,7 @@ var quizForm=$("quizForm"),quizStep=$("quizStep"),quizDots=$("quizDots"),quizCou
 var TOTAL=QUIZ.length+1;
 if(quizForm){
   Array.prototype.forEach.call(QUIZ,function(){var s=document.createElement("span");quizDots.appendChild(s);});
+  window.__vfRenderStep = renderStep;
   function renderStep(){
     quizCount.textContent="Step "+(qi+1)+" of "+TOTAL;
     Array.prototype.forEach.call(quizDots.children,function(d,i){d.className=i<=qi?"on":"";});
@@ -221,7 +222,7 @@ document.addEventListener("click",function(e){
     if(intr!==null&&intr!=="")answers[2]=parseInt(intr,10);
     if(loc!==null&&loc!=="")answers[4]=parseInt(loc,10);
     qi=(intr!==null&&intr!=="")?2:((loc!==null&&loc!=="")?4:0);
-    if(quizResult){quizResult.classList.remove("show");quizForm.style.display="";quizTop.style.display="";renderStep();}
+    if(quizResult){quizResult.classList.remove("show");quizForm.style.display="";quizTop.style.display="";if(window.__vfRenderStep)window.__vfRenderStep();} /* ← FIXED */
     var fq=$("find-course"); if(fq)fq.scrollIntoView({behavior:"smooth"});
   }else if(act==="ready"){
     var c=el.getAttribute("data-course"); if(c)$("rCourse").value=c;
