@@ -1,5 +1,5 @@
 /* ═══ VISTORA EDU — SHARED CONFIG (loaded by ALL pages) ═══ */
-var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxbt4ct8JGiBQhkPatsPjo9LAFD8Aoc9W9I_m2EWcwhglIlwv2s9i9WQPKh2Zo-9ApX/exec";
+var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyH1vAPx7f_UY0ez3L5hFGdJoIwMb_CuD0UcM5A-qtr6uTjdp-wJF6TpoNmPnOtK70DwQ/exec";
 var ANALYTICS_CONFIG = { ga4MeasurementId: "" }; // EDIT: add real GA4 ID when ready
 var WA_NUMBER = "919946439474";
 var CONFIG = { googleRating:null, googleCount:null, reviews:[], partners:[] }; // genuine data only
